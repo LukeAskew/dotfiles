@@ -56,6 +56,11 @@ fonts=(
   font-roboto
 )
 
+# screen savers
+screensavers=(
+  fliqlo
+)
+
 # Specify the location of the apps
 appdir="/Applications"
 
@@ -88,6 +93,10 @@ main() {
   # install fonts
   echo "installing fonts..."
   brew cask install ${fonts[@]}
+  
+  # install screen savers
+  echo "installing screen savers..."
+  brew cask install ${screensavers[@]}
 
   # link with alfred
   alfred
