@@ -37,6 +37,7 @@ apps=(
   slack
   soundcleod
   soundflower
+  spectacle
   spotify
   sublime-text3
   tower
@@ -54,6 +55,9 @@ fonts=(
   font-clear-sans
   font-roboto
 )
+
+# Specify the location of the apps
+appdir="/Applications"
 
 # Check for Homebrew
 if test ! $(which brew); then
@@ -79,7 +83,7 @@ main() {
 
   # install apps
   echo "installing apps..."
-  brew cask install ${apps[@]}
+  brew cask install --appdir=$appdir ${apps[@]}
 
   # install fonts
   echo "installing fonts..."
