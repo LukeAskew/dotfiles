@@ -83,6 +83,10 @@ echo "Disable smart quotes and smart dashes as theyâ€™re annoying when typi
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
+echo ""
+echo "Disable the “Are you sure you want to open this application?” dialog"
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
@@ -117,6 +121,32 @@ echo ""
 echo "Turn off keyboard illumination when computer is not used for 5 minutes"
 defaults write com.apple.BezelServices kDimTime -int 300
 
+echo ""
+echo "Trackpad: enable tap to click for this user and for the login screen"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+echo ""
+echo "Trackpad: map bottom right corner to right-click"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+echo ""
+echo "Disable “natural” (Lion-style) scrolling"
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo ""
+echo "Use scroll gesture with the Ctrl (^) modifier key to zoom"
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
+echo ""
+echo "Follow the keyboard focus while zoomed in"
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+
 ###############################################################################
 # Screen
 ###############################################################################
@@ -134,9 +164,24 @@ echo ""
 echo "Enable HiDPI display modes (requires restart)"
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
+echo ""
+echo "Save screenshots to the desktop"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+
+echo ""
+echo "Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)"
+defaults write com.apple.screencapture type -string "png"
+
+echo ""
+echo "Disable shadow in screenshots"
+defaults write com.apple.screencapture disable-shadow -bool true
+
 ###############################################################################
 # Finder
 ###############################################################################
+
+echo "Disable window animations and Get Info animations"
+defaults write com.apple.finder DisableAllAnimations -bool true
 
 echo ""
 echo "Showing icons for hard drives, servers, and removable media on the desktop"
@@ -197,9 +242,30 @@ echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-r
 defaults write com.apple.dock tilesize -int 36
 
 echo ""
+echo "Enable highlight hover effect for the grid view of a stack (Dock)"
+defaults write com.apple.dock mouse-over-hilite-stack -bool true
+
+echo ""
+echo "Change minimize/maximize window effect"
+defaults write com.apple.dock mineffect -string "scale"
+
+echo ""
+echo "Don’t animate opening applications from the Dock"
+defaults write com.apple.dock launchanim -bool false
+
+echo ""
 echo "Speeding up Mission Control animations and grouping windows by application"
 defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "expose-group-by-app" -bool true
+
+echo ""
+echo "Configuring Hot Corners"
+# Bottom right screen corner → Desktop
+defaults write com.apple.dock wvous-br-corner -int 4
+defaults write com.apple.dock wvous-br-modifier -int 0
+# Bottom left screen corner → Start screen saver
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 0
 
 
 ###############################################################################
@@ -269,9 +335,6 @@ echo "Disable computer sleep and stop the display from shutting off"
 sudo pmset -a sleep 0
 sudo pmset -a displaysleep 0
 
-echo ""
-echo "Disable annoying backswipe in Chrome"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
 # Kill affected applications
