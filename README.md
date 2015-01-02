@@ -4,7 +4,7 @@ mac-setup
 One-liner:
 
 ```
-(mkdir -p /tmp/dots && cd /tmp/dots && curl -L https://github.com/lukeaskew/mac-setup/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
+(mkdir -p ~/Development/github/osx-setup && cd ~/Development/github/osx-setup && curl -L https://github.com/lukeaskew/osx-setup/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
 ```
 
 Setup script for new Mac development machine
