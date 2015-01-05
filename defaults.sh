@@ -238,8 +238,8 @@ echo "Enabling snap-to-grid for icons on the desktop and in other icon views"
 #defaults write com.apple.dock persistent-apps -array
 
 echo ""
-echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
-defaults write com.apple.dock tilesize -int 36
+echo "Setting the icon size of Dock items to 42 pixels for optimal size/screen-realestate"
+defaults write com.apple.dock tilesize -int 42
 
 echo ""
 echo "Enable highlight hover effect for the grid view of a stack (Dock)"
