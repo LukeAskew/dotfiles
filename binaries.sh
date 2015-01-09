@@ -29,17 +29,13 @@ binaries=(
   graphicsmagick
   webkit2png
   phantomjs
-  rename
-  zopfli
   ffmpeg
   python
   mongo
-  sshfs
   trash
   tree
   ack
   git
-  hub
 )
 
 # Install the binaries
