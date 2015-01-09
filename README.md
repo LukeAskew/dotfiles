@@ -1,5 +1,4 @@
-New Mac OSX developer setup
-=========
+# New Mac OSX developer setup
 
 One line command:
 
@@ -7,7 +6,7 @@ One line command:
 (mkdir -p /tmp/osx-setup && cd /tmp/osx-setup && curl -L https://github.com/lukeaskew/osx-setup/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
 ```
 
-Setup script for new Mac development machine
+## Features
 
 - Installs Homebrew
 - Installs apps
@@ -16,7 +15,7 @@ Setup script for new Mac development machine
 - Configures ZSH
 - Sets wallpaper
 
-Additional Links:
+## Additional Links:
 
 - [IE VMs](https://github.com/xdissent/ievms)
 - [Sublime settings](https://gist.github.com/LukeAskew/8042177)
