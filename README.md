@@ -1,8 +1,6 @@
 New Mac OSX developer setup
 =========
 
-> Bootstrap setup on your new Mac
-
 One-liner:
 
 ```
