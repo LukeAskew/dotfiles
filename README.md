@@ -13,8 +13,13 @@ Setup script for new Mac development machine
 - Installs apps
 - Installs binaries
 - Sets OS defaults
+- Configures ZSH
+- Sets wallpaper
 
-TODO:
+Additional Links:
 
-- Configure sublime
-- Set wallpaper
+- [IE VMs](https://github.com/xdissent/ievms)
+- [Sublime settings](https://gist.github.com/LukeAskew/8042177)
+- [Sublime Package Control settings](https://gist.github.com/LukeAskew/86004ccaa09733236f18)
+- [iTerm theme](https://gist.github.com/LukeAskew/7791943)
+- [Meslo for Powerline font](https://github.com/powerline/fonts/tree/master/Meslo)

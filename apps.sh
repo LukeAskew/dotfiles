@@ -21,7 +21,7 @@ apps=(
   font-m-plus
   forklift
   genymotion
-  google-chrome
+  google-chrome-dev
   google drive
   iterm2
   macdown
@@ -42,19 +42,11 @@ apps=(
   spotify
   sublime-text3
   tower
-  transmit
   vagrant
   virtualbox
   vlc
   xscope
   zsh
-)
-
-# fonts
-fonts=(
-  font-m-plus
-  font-clear-sans
-  font-roboto
 )
 
 
@@ -80,16 +72,9 @@ main() {
   # Tap alternative versions
   brew tap caskroom/versions
 
-  # Tap the fonts
-  brew tap caskroom/fonts
-
   # install apps
   echo "installing apps..."
   brew cask install --appdir=$appdir ${apps[@]}
-
-  # install fonts
-  echo "installing fonts..."
-  brew cask install ${fonts[@]}
 
   # link with alfred
   alfred
