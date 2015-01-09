@@ -1,7 +1,7 @@
 New Mac OSX developer setup
 =========
 
-One-liner:
+One line command:
 
 ```
 (mkdir -p /tmp/osx-setup && cd /tmp/osx-setup && curl -L https://github.com/lukeaskew/osx-setup/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
