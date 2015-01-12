@@ -21,10 +21,11 @@ apps=(
   font-m-plus
   forklift
   genymotion
-  google-chrome
+  google-chrome-dev
   google drive
   iterm2
   macdown
+  mamp
   mailbox
   opera
   qlcolorcode
@@ -41,25 +42,13 @@ apps=(
   spotify
   sublime-text3
   tower
-  transmit
   vagrant
   virtualbox
   vlc
-  xampp
   xscope
+  zsh
 )
 
-# fonts
-fonts=(
-  font-m-plus
-  font-clear-sans
-  font-roboto
-)
-
-# screen savers
-screensavers=(
-  fliqlo
-)
 
 # Specify the location of the apps
 appdir="/Applications"
@@ -83,20 +72,9 @@ main() {
   # Tap alternative versions
   brew tap caskroom/versions
 
-  # Tap the fonts
-  brew tap caskroom/fonts
-
   # install apps
   echo "installing apps..."
   brew cask install --appdir=$appdir ${apps[@]}
-
-  # install fonts
-  echo "installing fonts..."
-  brew cask install ${fonts[@]}
-  
-  # install screen savers
-  echo "installing screen savers..."
-  brew cask install ${screensavers[@]}
 
   # link with alfred
   alfred
