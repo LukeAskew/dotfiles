@@ -27,6 +27,10 @@ brew install homebrew/dupes/grep
 # Install cask versions
 brew tap caskroom/versions
 
+# Install fonts
+brew tap caskroom/fonts
+brew cask install font-hack
+
 # Install other useful binaries
 binaries=(
   graphicsmagick
