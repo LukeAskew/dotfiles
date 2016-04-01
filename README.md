@@ -13,7 +13,6 @@ One line command:
 - Installs binaries
 - Sets OS defaults
 - Configures ZSH
-- Sets wallpaper
 
 ## Additional Links:
 
