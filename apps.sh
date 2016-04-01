@@ -6,38 +6,31 @@ set -e
 
 # Apps
 apps=(
-  1password
   alfred
-  appcleaner
   atom
+  cakebrew
   charles
   cord
-  cornerstone
   dropbox
   evernote
   firefox
   flash
   flux
-  font-m-plus
   forklift
   genymotion
   google-chrome-dev
-  google drive
-  iterm2
+  google-drive
+  iterm2-beta
   macdown
   mamp
-  mailbox
   opera
-  qlcolorcode
-  qlmarkdown
-  qlprettypatch
-  qlstephen
-  quicklook-json
+  sequel-pro
   sketch
   skype
   slack
   soundcleod
   soundflower
+  sourcetree
   spectacle
   spotify
   sublime-text3
@@ -45,7 +38,7 @@ apps=(
   vagrant
   virtualbox
   vlc
-  xscope
+  xamarin-studio
   zsh
 )
 
