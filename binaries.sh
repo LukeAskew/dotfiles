@@ -24,6 +24,9 @@ brew install bash
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
+# Install cask versions
+brew tap caskroom/versions
+
 # Install other useful binaries
 binaries=(
   graphicsmagick
