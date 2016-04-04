@@ -38,6 +38,7 @@ binaries=(
   ffmpeg
   python
   mongo
+  node
   tree
   ack
   git
