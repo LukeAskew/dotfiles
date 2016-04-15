@@ -57,11 +57,6 @@ main() {
   # Ensure homebrew is installed
   homebrew
 
-  # Install homebrew-cask
-  echo "installing cask..."
-  brew tap phinze/homebrew-cask
-  brew install brew-cask
-
   # Tap alternative versions
   brew tap caskroom/versions
 
