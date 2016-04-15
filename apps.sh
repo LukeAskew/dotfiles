@@ -17,9 +17,7 @@ apps=(
   flash
   flux
   forklift
-  genymotion
   google-chrome-dev
-  google-drive
   iterm2-beta
   macdown
   mamp
