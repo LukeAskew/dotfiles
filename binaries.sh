@@ -20,6 +20,9 @@ brew install findutils
 # Install Bash 4
 brew install bash
 
+# Install zsh
+brew unstall zsh
+
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
