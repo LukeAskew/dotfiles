@@ -37,7 +37,6 @@ apps=(
   virtualbox
   vlc
   xamarin-studio
-  zsh
 )
 
 
