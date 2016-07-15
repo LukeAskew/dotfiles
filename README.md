@@ -1,9 +1,20 @@
 # New Mac OSX developer setup
 
-One line command:
+## Usage
+
+Download the scripts:
 
 ```
-(mkdir -p /tmp/osx-setup && cd /tmp/osx-setup && curl -L https://github.com/lukeaskew/osx-setup/archive/master.tar.gz | tar zx --strip 1 && sh ./install.sh)
+(mkdir -p ~/.osx && cd ~/.osx && curl -L https://github.com/lukeaskew/osx-setup/archive/master.tar.gz | tar zx --strip 1)
+```
+
+Make any necessary modifications, especially to `apps.sh`.
+
+Run the install script:
+
+```
+cd ~/.osx
+sh ./install.sh
 ```
 
 ## Features
