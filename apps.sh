@@ -18,10 +18,12 @@ apps=(
   flux
   forklift
   google-chrome-dev
+  intellij-idea
   iterm2-beta
   macdown
   mamp
   opera
+  postbox
   sequel-pro
   sketch
   skype
@@ -31,10 +33,11 @@ apps=(
   sourcetree
   spectacle
   spotify
-  sublime-text3
+  sublime-text
   tower
   vagrant
   virtualbox
+  visual-studio-code
   vlc
   xamarin-studio
 )
