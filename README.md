@@ -5,7 +5,7 @@
 Download the scripts:
 
 ```
-(mkdir -p ~/.macOS && cd ~/.macOS && curl -L https://github.com/lukeaskew/mac-setup/archive/master.tar.gz | tar zx --strip 1)
+(mkdir -p ~/.macos && cd ~/.macos && curl -L https://github.com/lukeaskew/mac-setup/archive/master.tar.gz | tar zx --strip 1)
 ```
 
 Make any necessary modifications, especially to `apps.sh`.
@@ -13,7 +13,7 @@ Make any necessary modifications, especially to `apps.sh`.
 Run the install script:
 
 ```
-cd ~/.macOS
+cd ~/.macos
 sh ./install.sh
 ```
 
