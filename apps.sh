@@ -6,47 +6,37 @@ set -e
 
 # Apps
 apps=(
-  1password
   alfred
-  appcleaner
   atom
+  cakebrew
   charles
   cord
-  cornerstone
   dropbox
   evernote
   firefox
-  flash
-  flux
-  font-m-plus
   forklift
-  genymotion
-  google-chrome-dev
-  google drive
-  iterm2
+  intellij-idea
+  iterm2-beta
   macdown
   mamp
-  mailbox
   opera
-  qlcolorcode
-  qlmarkdown
-  qlprettypatch
-  qlstephen
-  quicklook-json
+  postbox
+  sequel-pro
   sketch
   skype
   slack
   soundcleod
   soundflower
+  sourcetree
   spectacle
   spotify
-  sublime-text3
+  sublime-text
   tower
   vagrant
   virtualbox
+  visual-studio-code
   vlc
-  xscope
-  zsh
+  xamarin-studio
 )
 
 
@@ -63,11 +53,6 @@ main() {
 
   # Ensure homebrew is installed
   homebrew
-
-  # Install homebrew-cask
-  echo "installing cask..."
-  brew tap phinze/homebrew-cask
-  brew install brew-cask
 
   # Tap alternative versions
   brew tap caskroom/versions
