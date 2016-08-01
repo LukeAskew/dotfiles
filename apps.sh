@@ -14,8 +14,6 @@ apps=(
   dropbox
   evernote
   firefox
-  flash
-  flux
   forklift
   intellij-idea
   iterm2-beta
