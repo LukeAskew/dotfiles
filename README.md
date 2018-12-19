@@ -1,34 +1,21 @@
-# New Mac setup for developers
+# dotfiles
 
 ## Usage
 
-Download the scripts:
-
 ```
-(mkdir -p ~/.macos && cd ~/.macos && curl -L https://github.com/lukeaskew/mac-setup/archive/master.tar.gz | tar zx --strip 1)
-```
-
-Make any necessary modifications, especially to `apps.sh`.
-
-Run the install script:
-
-```
-cd ~/.macos
-sh ./install.sh
+$ source scripts/symlink.sh
+$ source scripts/bootstrap.sh
 ```
 
 ## Features
 
 - Installs Homebrew
-- Installs apps
+- Installs Applications (casks)
 - Installs binaries
-- Sets OS defaults
-- Configures ZSH
+- Configures Zsh
+- Configures macOS
 
 ## Additional Links:
 
-- [IE VMs](https://github.com/xdissent/ievms)
-- [Sublime settings](https://gist.github.com/LukeAskew/8042177)
-- [Sublime Package Control settings](https://gist.github.com/LukeAskew/86004ccaa09733236f18)
+- [Mackup](https://github.com/lra/mackup)
 - [iTerm theme](https://gist.github.com/LukeAskew/7791943)
-- [Meslo for Powerline font](https://github.com/powerline/fonts/tree/master/Meslo)

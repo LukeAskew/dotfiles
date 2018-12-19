@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+# Base 64 encode a file
+base64 () {
+  openssl base64 < $1 | tr -d '\n' | pbcopy
+}
+
+# Zip a file
+archive () {
+  date=$(date +%s)
+  zip -r $1-$date $1
+}
+
+# Show IP addresses
+ip () {
+  curl ipinfo.io/ip && ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.[0-9]*'
+}
+
+# Kill all node.js procs
+killnode () {
+  pgrep -x node | grep -v grep | xargs kill -9
+}

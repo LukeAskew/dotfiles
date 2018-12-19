@@ -1,0 +1,1 @@
+0 12 * * 2 $HOME/.cron/weekly.sh > /dev/null 2>&1
