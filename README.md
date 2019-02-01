@@ -19,3 +19,4 @@ $ source scripts/bootstrap.sh
 
 - [Mackup](https://github.com/lra/mackup)
 - [iTerm theme](https://gist.github.com/LukeAskew/7791943)
+- [Screen Saver](https://github.com/soffes/Clock.saver)
