@@ -27,7 +27,7 @@ export PATH=$HOME/miniconda3/bin:$PATH
 export PATH=$HOME/.yarn/bin:$PATH
 
 # Node
-export PATH=/usr/local/opt/node/bin:$PATH
+export PATH=/usr/local/opt/node@10/bin:$PATH
 export PATH=$(pwd)/node_modules/.bin:$PATH
 
 # Postgres
