@@ -32,3 +32,6 @@ export PATH=$(pwd)/node_modules/.bin:$PATH
 
 # Postgres
 export PATH=/usr/local/opt/postgresql/bin:$PATH
+
+# Ruby
+eval "$(rbenv init -)"
