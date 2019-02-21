@@ -15,21 +15,19 @@ casks=(
   alfred
   beardedspice
   caffeine
-  cakebrew
   charles
-  dropbox
   evernote
   firefox
   font-hack
   font-meslo-for-powerline
   forklift
+  google-backup-and-sync
   google-cloud-sdk
+  imageoptim
   iterm2
   java
-  kap
   logitech-options
   macdown
-  mamp
   opera
   postman
   qlcolorcode
@@ -41,17 +39,14 @@ casks=(
   quicklook-csv
   quicklook-json
   quicklookase
-  sequel-pro
   sketch
   sketch-toolbox
-  skype
   slack
   soundflower
   spectacle
   spotify
   the-unarchiver
   tower
-  transmission
   visual-studio-code
   vlc
   webpquicklook
