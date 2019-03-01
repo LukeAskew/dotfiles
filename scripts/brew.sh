@@ -31,7 +31,7 @@ brew install screen
 brew install zsh
 
 # Install wget with IRI support
-brew install wget --with-iri
+brew install wget
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -45,6 +45,7 @@ brew install mongodb
 brew install node@10
 brew install php
 brew install postgresql
+brew install rbenv
 brew install redis
 brew install sbt
 brew install scala
@@ -58,8 +59,7 @@ brew install git
 brew install git-lfs
 brew install graphicsmagick
 brew install grep
-brew install heroku
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install mackup
 brew install mysql
 brew install openssl

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Create directories
 mkdir -p "/usr/local/lib"
 mkdir -p "/usr/local/bin"

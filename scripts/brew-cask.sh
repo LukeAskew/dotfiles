@@ -16,17 +16,19 @@ casks=(
   beardedspice
   caffeine
   charles
+  eqmac
   evernote
   firefox
   font-hack
   font-meslo-for-powerline
   forklift
   google-backup-and-sync
+  google-chrome
   google-cloud-sdk
+  homebrew/cask-drivers/logitech-options
   imageoptim
   iterm2
   java
-  logitech-options
   macdown
   opera
   postman
@@ -42,7 +44,6 @@ casks=(
   sketch
   sketch-toolbox
   slack
-  soundflower
   spectacle
   spotify
   the-unarchiver
@@ -52,7 +53,9 @@ casks=(
   webpquicklook
 )
 
-brew cask install --appdir="/Applications" ${casks[@]}
+for c in ${casks[@]}; do
+  brew cask install --appdir="/Applications" $c
+done
 
 # Finalize
 brew cleanup
