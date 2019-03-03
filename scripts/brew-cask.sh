@@ -46,6 +46,7 @@ casks=(
   slack
   spectacle
   spotify
+  tableplus
   the-unarchiver
   tower
   visual-studio-code
