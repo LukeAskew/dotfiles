@@ -2,9 +2,18 @@
 
 ## Usage
 
+Setup crontab:
+
+```bash
+crontab -e
+crontab .cron/crontab
+chmod -R +x .cron
 ```
-$ source scripts/symlink.sh
-$ source scripts/bootstrap.sh
+
+Run scripts:
+
+```bash
+source scripts/bootstrap.sh
 ```
 
 ## Features
@@ -15,7 +24,7 @@ $ source scripts/bootstrap.sh
 - Configures Zsh
 - Configures macOS
 
-## Additional Links:
+## Additional Links
 
 - [Mackup](https://github.com/lra/mackup)
 - [iTerm theme](https://gist.github.com/LukeAskew/7791943)

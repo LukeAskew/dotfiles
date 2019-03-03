@@ -12,10 +12,7 @@ sh scripts/brew-cask.sh
 sh scripts/xcode.sh
 sh scripts/zsh.sh
 sh scripts/macos.sh
-
-# Crons
-crontab .cron/crontab
-chmod -R +x .cron
+sh scripts/symlink.sh
 
 # Finish
 source ~/.zshrc
