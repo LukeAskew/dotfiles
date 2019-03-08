@@ -4,31 +4,31 @@ set -e
 echo "Setting up Homebrew Cask..."
 
 # Tap
-brew tap caskroom/cask
-brew tap caskroom/fonts
-brew tap caskroom/versions
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
 
 # Install casks
 echo "Installing casks..."
 
 casks=(
+  1password
   alfred
   beardedspice
   caffeine
   charles
-  eqmac
   evernote
   firefox
+  flash-player
   font-hack
   font-meslo-for-powerline
   forklift
   google-backup-and-sync
   google-chrome
   google-cloud-sdk
-  homebrew/cask-drivers/logitech-options
   imageoptim
   iterm2
   java
+  logitech-options
   macdown
   opera
   postman
