@@ -2,9 +2,11 @@
 
 set -e
 
+sudo -v
+
 # Create directories
-mkdir -p "/usr/local/lib"
-mkdir -p "/usr/local/bin"
+sudo mkdir -p "/usr/local/lib"
+sudo mkdir -p "/usr/local/bin"
 
 # Run scripts
 sh scripts/brew.sh
