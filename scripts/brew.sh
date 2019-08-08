@@ -42,8 +42,10 @@ brew install woff2
 # Install languages and runtimes
 brew install go
 brew install mongodb
+brew install nginx
 brew install node@10
-brew install php
+brew install php --with-fpm --without-apache
+brew install composer
 brew install postgresql
 brew install rbenv
 brew install redis
