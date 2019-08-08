@@ -1,22 +1,33 @@
 #!/usr/bin/bash
 
 # Base 64 encode a file
-base64 () {
+base64() {
   openssl base64 < $1 | tr -d '\n' | pbcopy
 }
 
 # Zip a file
-archive () {
+archive() {
   date=$(date +%s)
   zip -r $1-$date $1
 }
 
 # Show IP addresses
-ip () {
+ip() {
   curl ipinfo.io/ip && ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.[0-9]*'
 }
 
 # Kill all node.js procs
-killnode () {
+killnode() {
   pgrep -x node | grep -v grep | xargs kill -9
+}
+
+# Kill process running on a specific port
+killport() {
+  sudo kill -9 `lsof -w -n -i tcp:$1 | awk '{print $2}'| awk 'END{print}'`;
+}
+
+# iTerm scripting
+iterm2_print_user_vars() {
+  iterm2_set_user_var rubyVersion $(ruby -v | awk '{ print $2 }')
+  iterm2_set_user_var nodeVersion $(node -v)
 }
