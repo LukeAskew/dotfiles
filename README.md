@@ -1,5 +1,14 @@
 # dotfiles
 
+## Features
+
+- Installs Homebrew
+- Installs Applications (casks)
+- Installs binaries
+- Configures Zsh
+- Configures macOS
+- Weekly cron to backup files via Mackup
+
 ## Usage
 
 Setup crontab:
@@ -15,14 +24,6 @@ Run scripts:
 ```bash
 source scripts/bootstrap.sh
 ```
-
-## Features
-
-- Installs Homebrew
-- Installs Applications (casks)
-- Installs binaries
-- Configures Zsh
-- Configures macOS
 
 ## Additional Links
 

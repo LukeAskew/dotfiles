@@ -1,7 +1,7 @@
 # Functions
 source ~/.functions
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin
 
 # History
 export HISTTIMEFORMAT="%F %T "
@@ -28,7 +28,6 @@ export PATH=$HOME/.yarn/bin:$PATH
 
 # Node
 export PATH=/usr/local/opt/node@10/bin:$PATH
-export PATH=$(pwd)/node_modules/.bin:$PATH
 
 # Postgres
 export PATH=/usr/local/opt/postgresql/bin:$PATH
