@@ -22,15 +22,15 @@ export GOROOT=$(brew --prefix golang)/libexec
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:${GOBIN}:${GOROOT}/bin
 
-# Python
-export PATH=$HOME/miniconda3/bin:$PATH
-export PATH=$HOME/.yarn/bin:$PATH
-
-# Node
-export PATH=/usr/local/opt/node@10/bin:$PATH
-
-# Postgres
-export PATH=/usr/local/opt/postgresql/bin:$PATH
-
 # Ruby
 eval "$(rbenv init -)"
+
+# Node
+export PATH=/usr/local/opt/node@12/bin:$PATH
+
+# PHP
+export PATH=/usr/local/opt/php@7.4/bin:$PATH
+export PATH=/usr/local/opt/php@7.4/sbin:$PATH
+
+# Postgres
+export PATH=/usr/local/opt/postgresql@12/bin:$PATH

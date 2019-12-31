@@ -14,11 +14,10 @@ casks=(
   1password
   alfred
   beardedspice
+  boom-3d
   caffeine
   charles
-  evernote
   firefox
-  flash-player
   font-hack
   font-meslo-for-powerline
   forklift
@@ -34,16 +33,11 @@ casks=(
   postman
   qlcolorcode
   qlimagesize
-  qlmarkdown
-  qlprettypatch
   qlstephen
-  qlvideo
-  quicklook-csv
   quicklook-json
-  quicklookase
-  sketch
-  sketch-toolbox
+  sequel-pro
   slack
+  soundflower
   spectacle
   spotify
   tableplus
@@ -52,6 +46,7 @@ casks=(
   visual-studio-code
   vlc
   webpquicklook
+  xscope
 )
 
 for c in ${casks[@]}; do

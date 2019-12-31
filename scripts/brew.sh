@@ -43,19 +43,16 @@ brew install woff2
 brew install go
 brew install mongodb
 brew install nginx
-brew install node@10
-brew install php --with-fpm --without-apache
+brew install node@12
+brew install php@7.4
 brew install composer
-brew install postgresql
+brew install postgresql@12
 brew install rbenv
 brew install redis
-brew install sbt
-brew install scala
 
 # Install other useful binaries
 brew install ack
 brew install awscli
-brew install diff-so-fancy
 brew install ffmpeg
 brew install git
 brew install git-lfs

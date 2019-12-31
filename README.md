@@ -25,6 +25,12 @@ Run scripts:
 source scripts/bootstrap.sh
 ```
 
+Add a spacer to the dock:
+
+```bash
+defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+```
+
 ## Additional Links
 
 - [Mackup](https://github.com/lra/mackup)
