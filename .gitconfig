@@ -39,3 +39,6 @@ followTags = true
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+
+[alias]
+  l = log --graph --date=short

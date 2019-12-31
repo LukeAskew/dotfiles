@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
 
+set -e
+
+sudo -v
+
 # Create directories
-mkdir -p "/usr/local/lib"
-mkdir -p "/usr/local/bin"
+sudo mkdir -p "/usr/local/lib"
+sudo mkdir -p "/usr/local/bin"
+
+# Install Iterm integration
+curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
 # Run scripts
 sh scripts/brew.sh
@@ -10,10 +17,7 @@ sh scripts/brew-cask.sh
 sh scripts/xcode.sh
 sh scripts/zsh.sh
 sh scripts/macos.sh
-
-# Crons
-crontab .cron/crontab
-chmod -R +x .cron
+sh scripts/symlink.sh
 
 # Finish
 source ~/.zshrc

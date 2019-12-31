@@ -4,60 +4,54 @@ set -e
 echo "Setting up Homebrew Cask..."
 
 # Tap
-brew tap caskroom/cask
-brew tap caskroom/fonts
-brew tap caskroom/versions
+brew tap homebrew/cask-fonts
+brew tap homebrew/cask-versions
 
 # Install casks
 echo "Installing casks..."
 
 casks=(
+  1password
   alfred
   beardedspice
+  boom-3d
   caffeine
-  cakebrew
   charles
-  dropbox
-  evernote
   firefox
   font-hack
   font-meslo-for-powerline
   forklift
+  google-backup-and-sync
+  google-chrome
   google-cloud-sdk
+  imageoptim
   iterm2
   java
-  kap
   logitech-options
   macdown
-  mamp
   opera
   postman
   qlcolorcode
   qlimagesize
-  qlmarkdown
-  qlprettypatch
   qlstephen
-  qlvideo
-  quicklook-csv
   quicklook-json
-  quicklookase
   sequel-pro
-  sketch
-  sketch-toolbox
-  skype
   slack
   soundflower
   spectacle
   spotify
+  tableplus
   the-unarchiver
   tower
-  transmission
   visual-studio-code
   vlc
   webpquicklook
+  xscope
 )
 
-brew cask install --appdir="/Applications" ${casks[@]}
+for c in ${casks[@]}; do
+  brew cask install --appdir="/Applications" $c
+done
 
 # Finalize
 brew cleanup

@@ -5,9 +5,11 @@ sources=(
   .bashrc
   .cron
   .functions
+  .gemrc
   .gitconfig
   .mackup
   .mackup.cfg
+  .rdebugrc
   .zshrc
 )
 

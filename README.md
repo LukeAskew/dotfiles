@@ -1,12 +1,5 @@
 # dotfiles
 
-## Usage
-
-```
-$ source scripts/symlink.sh
-$ source scripts/bootstrap.sh
-```
-
 ## Features
 
 - Installs Homebrew
@@ -14,8 +7,32 @@ $ source scripts/bootstrap.sh
 - Installs binaries
 - Configures Zsh
 - Configures macOS
+- Weekly cron to backup files via Mackup
 
-## Additional Links:
+## Usage
+
+Setup crontab:
+
+```bash
+crontab -e
+crontab .cron/crontab
+chmod -R +x .cron
+```
+
+Run scripts:
+
+```bash
+source scripts/bootstrap.sh
+```
+
+Add a spacer to the dock:
+
+```bash
+defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+```
+
+## Additional Links
 
 - [Mackup](https://github.com/lra/mackup)
 - [iTerm theme](https://gist.github.com/LukeAskew/7791943)
+- [Screen Saver](https://github.com/soffes/Clock.saver)
