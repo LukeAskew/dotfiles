@@ -24,7 +24,6 @@ brew install bash-completion2
 # Install more recent versions of some OS X tools
 brew install nano
 brew install grep
-brew install openssh
 brew install screen
 
 # Install zsh

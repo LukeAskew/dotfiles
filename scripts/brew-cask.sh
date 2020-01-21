@@ -6,6 +6,7 @@ echo "Setting up Homebrew Cask..."
 # Tap
 brew tap homebrew/cask-fonts
 brew tap homebrew/cask-versions
+brew tap homebrew/cask-drivers
 
 # Install casks
 echo "Installing casks..."
@@ -50,7 +51,7 @@ casks=(
 )
 
 for c in ${casks[@]}; do
-  brew cask install --appdir="/Applications" $c
+  brew cask install --force --appdir="/Applications" $c
 done
 
 # Finalize

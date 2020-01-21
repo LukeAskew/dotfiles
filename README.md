@@ -34,5 +34,5 @@ defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-
 ## Additional Links
 
 - [Mackup](https://github.com/lra/mackup)
-- [iTerm theme](https://gist.github.com/LukeAskew/7791943)
+- [iTerm theme](https://github.com/nathanbuchar/atom-one-dark-terminal)
 - [Screen Saver](https://github.com/soffes/Clock.saver)
