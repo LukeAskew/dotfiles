@@ -18,6 +18,7 @@ casks=(
   boom-3d
   caffeine
   charles
+  clocksaver
   firefox
   font-hack
   font-meslo-for-powerline
