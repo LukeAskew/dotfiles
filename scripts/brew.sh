@@ -16,7 +16,6 @@ brew install coreutils
 brew install moreutils
 brew install findutils
 
-
 # Install Bash
 brew install bash
 brew install bash-completion2
@@ -24,7 +23,6 @@ brew install bash-completion2
 # Install more recent versions of some OS X tools
 brew install nano
 brew install grep
-brew install openssh
 brew install screen
 
 # Install zsh
@@ -43,12 +41,12 @@ brew install woff2
 brew install go
 brew install mongodb
 brew install nginx
-brew install node@12
 brew install php@7.4
 brew install composer
 brew install postgresql@12
 brew install rbenv
 brew install redis
+brew install java11
 
 # Install other useful binaries
 brew install ack

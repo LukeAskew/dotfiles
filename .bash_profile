@@ -22,15 +22,21 @@ export GOROOT=$(brew --prefix golang)/libexec
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:${GOBIN}:${GOROOT}/bin
 
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home -v11)
+
 # Ruby
 eval "$(rbenv init -)"
 
 # Node
-export PATH=/usr/local/opt/node@12/bin:$PATH
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # PHP
 export PATH=/usr/local/opt/php@7.4/bin:$PATH
 export PATH=/usr/local/opt/php@7.4/sbin:$PATH
 
 # Postgres
-export PATH=/usr/local/opt/postgresql@12/bin:$PATH
+export PATH=/Applications/Postgres.app/Contents/Versions/11/bin:$PATH
+export PGUSER=postgres
+export PGHOST=localhost

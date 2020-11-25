@@ -1,6 +1,5 @@
 [user]
   name = Luke Askew
-  email = lukeaskew@gmail.com
 
 [pager]
   diff = diff-so-fancy | less --tabs=4 -RFX

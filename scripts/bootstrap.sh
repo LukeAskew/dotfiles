@@ -19,6 +19,10 @@ sh scripts/zsh.sh
 sh scripts/macos.sh
 sh scripts/symlink.sh
 
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
+nvm install 14
+
 # Finish
 source ~/.zshrc
 echo "Done!"
