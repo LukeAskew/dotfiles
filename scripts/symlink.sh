@@ -2,6 +2,7 @@
 
 sources=(
   .bash_profile
+  .work_profile
   .bashrc
   .cron
   .functions
