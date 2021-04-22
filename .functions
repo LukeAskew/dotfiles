@@ -5,6 +5,11 @@ b64() {
   openssl base64 < $1 | tr -d '\n' | pbcopy
 }
 
+# Copy file contents to clipboard
+copy() {
+  pbcopy < $1
+}
+
 # Zip a file
 archive() {
   date=$(date +%s)
@@ -24,4 +29,10 @@ killnode() {
 # Kill process running on a specific port
 killport() {
   sudo kill -9 `lsof -w -n -i tcp:$1 | awk '{print $2}'| awk 'END{print}'`;
+}
+
+# Test shell startup time
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }

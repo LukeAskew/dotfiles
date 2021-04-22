@@ -25,42 +25,28 @@ brew install nano
 brew install grep
 brew install screen
 
-# Install zsh
-brew install zsh
-
-# Install wget with IRI support
-brew install wget
-
 # Install font tools.
 brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install languages and runtimes
-brew install go
-brew install mongodb
-brew install nginx
-brew install php@7.4
-brew install composer
-brew install postgresql@12
-brew install rbenv
-brew install redis
-brew install java11
-
 # Install other useful binaries
 brew install ack
+brew install asdf
 brew install awscli
 brew install ffmpeg
+brew install gpg
 brew install git
 brew install git-lfs
 brew install graphicsmagick
 brew install grep
 brew install imagemagick
 brew install mackup
-brew install mysql
+brew install nginx
 brew install openssl
 brew install tree
+brew install wget
 brew install zsh
 
 # Remove outdated versions from the cellar

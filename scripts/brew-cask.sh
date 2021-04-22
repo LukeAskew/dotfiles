@@ -14,9 +14,7 @@ echo "Installing casks..."
 casks=(
   1password
   alfred
-  beardedspice
   boom-3d
-  caffeine
   charles
   clocksaver
   firefox
@@ -28,10 +26,10 @@ casks=(
   google-cloud-sdk
   imageoptim
   iterm2
-  java
   logitech-options
-  macdown
-  opera
+  microsoft-edge
+  pandora
+  postgres
   postman
   qlcolorcode
   qlimagesize
@@ -43,16 +41,14 @@ casks=(
   spectacle
   spotify
   tableplus
-  the-unarchiver
   tower
   visual-studio-code
-  vlc
   webpquicklook
   xscope
 )
 
 for c in ${casks[@]}; do
-  brew cask install --force --appdir="/Applications" $c
+  brew install --cask --force --appdir="/Applications" $c
 done
 
 # Finalize
