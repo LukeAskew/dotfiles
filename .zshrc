@@ -11,19 +11,16 @@ SAVEHIST=100000
 setopt inc_append_history
 setopt share_history
 
-# Antigen
+# Plugins
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle paulirish/git-open
-antigen bundle command-not-found
-antigen bundle tarruda/zsh-autosuggestions
-antigen bundle trapd00r/zsh-syntax-highlighting-filetypes
 antigen apply
-
-# Activate bash_profile
-source ~/.bash_profile
 
 # Bash profile specific to work stuff
 test -e "${HOME}/.work_profile" && source ~/.work_profile
+
+# Activate bash_profile
+source ~/.bash_profile
 
 # iTerm scripting
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

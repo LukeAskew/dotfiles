@@ -2,6 +2,7 @@
 
 sources=(
   .bash_profile
+  .tool-versions
   .work_profile
   .bashrc
   .cron
