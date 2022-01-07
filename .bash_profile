@@ -1,11 +1,8 @@
 # Functions
 source ~/.functions
 
-# Activate asdf
-. /usr/local/opt/asdf/asdf.sh
-
 # Set PATH
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
 
 # History
 export HISTTIMEFORMAT="%F %T "
@@ -21,6 +18,5 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export EDITOR="code"
 
 # Postgres
-export PATH=/Applications/Postgres.app/Contents/Versions/11/bin:$PATH
 export PGUSER=postgres
 export PGHOST=localhost

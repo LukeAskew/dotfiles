@@ -3,7 +3,7 @@
 ## Features
 
 - Installs Homebrew
-- Installs Applications (casks)
+- Installs Applications
 - Installs binaries
 - Configures Zsh
 - Configures macOS
@@ -31,8 +31,8 @@ Add a spacer to the dock:
 defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 ```
 
-## Additional Links
+## Resources
 
 - [Mackup](https://github.com/lra/mackup)
-- [iTerm theme](https://github.com/nathanbuchar/atom-one-dark-terminal)
-- [Screen Saver](https://github.com/soffes/Clock.saver)
+- [iTerm theme](https://github.com/one-dark/iterm-one-dark-theme)
+- [Meslo Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/L/Regular/complete/Meslo%20LG%20L%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)

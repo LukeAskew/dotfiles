@@ -1,13 +1,19 @@
 [user]
-  name = Luke Askew
+	name = Luke Askew
+
+[include]
+  path = .gitconfig-work
+
+[includeif "gitdir:~/Development/oss/"]
+  path = .gitconfig-oss
 
 [pager]
   diff = diff-so-fancy | less --tabs=4 -RFX
   show = diff-so-fancy | less --tabs=4 -RFX
 
 [push]
-default = current
-followTags = true
+  default = current
+  followTags = true
 
 [fetch]
   prune = true

@@ -11,4 +11,5 @@ Thumbs.db
 .Trashes
 
 # Sensitive information
+.gitconfig-*
 .work_profile

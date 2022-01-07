@@ -14,37 +14,33 @@ echo "Installing casks..."
 casks=(
   1password
   alfred
+  appcleaner
   boom-3d
-  charles
-  clocksaver
+  chromedriver
+  figma
   firefox
   font-hack
-  font-meslo-for-powerline
   forklift
-  google-backup-and-sync
   google-chrome
   google-cloud-sdk
+  google-drive
   imageoptim
   iterm2
+  logitech-camera-settings
   logitech-options
   microsoft-edge
-  pandora
-  postgres
+  moom
   postman
   qlcolorcode
   qlimagesize
   qlstephen
   quicklook-json
-  sequel-pro
   slack
-  soundflower
-  spectacle
-  spotify
   tableplus
+  tidal
   tower
   visual-studio-code
   webpquicklook
-  xscope
 )
 
 for c in ${casks[@]}; do
