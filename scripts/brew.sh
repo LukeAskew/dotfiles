@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+sudo -v
+
 # Install/update Homebrew
 if test ! $(which brew); then
   echo "Installing Homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   echo "Updating Homebrew..."
   brew update
@@ -25,6 +27,11 @@ brew install nano
 brew install grep
 brew install screen
 
+# Web runtimes
+brew install nginx
+brew install postgresql
+brew install redis
+
 # Install font tools.
 brew tap bramstein/webfonttools
 brew install sfnt2woff
@@ -43,8 +50,8 @@ brew install graphicsmagick
 brew install grep
 brew install imagemagick
 brew install mackup
-brew install nginx
 brew install openssl
+brew install thefuck
 brew install tree
 brew install wget
 brew install zsh

@@ -18,7 +18,7 @@ archive() {
 
 # Show IP addresses
 ip() {
-  curl ipinfo.io/ip && ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.[0-9]*'
+  curl ipinfo.io/ip && ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.[0-9]*' | sed 's/^/n/'
 }
 
 # Kill all node.js procs

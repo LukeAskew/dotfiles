@@ -9,9 +9,13 @@ sources=(
   .functions
   .gemrc
   .gitconfig
+  .gitconfig-oss
+  .gitconfig-work
+  .hushlogin
   .mackup
   .mackup.cfg
   .rdebugrc
+  .zprofile
   .zshrc
 )
 
