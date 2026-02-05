@@ -2,7 +2,7 @@
 source ~/.functions
 
 # Set PATH
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/.local/bin:$PATH
 
 # History
 export HISTTIMEFORMAT="%F %T "
@@ -15,8 +15,14 @@ export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # User configs
-export EDITOR="code"
+export EDITOR="zed"
 
 # Postgres
 export PGUSER=postgres
 export PGHOST=localhost
+
+# Starship prompt
+eval "$(starship init bash)"
+
+# Activate mise (version manager)
+eval "$(mise activate bash)"

@@ -2,24 +2,15 @@
 
 ## Features
 
-- Installs Homebrew
-- Installs Applications
+- Installs applications
 - Installs binaries
-- Configures Zsh
+- Configures a shell
 - Configures macOS
-- Weekly cron to backup files via Mackup
+- Sets up weekly backups
 
 ## Usage
 
-Setup crontab:
-
-```bash
-crontab -e
-crontab .cron/crontab
-chmod -R +x .cron
-```
-
-Run scripts:
+Run the bootstrap script:
 
 ```bash
 source scripts/bootstrap.sh
@@ -35,4 +26,3 @@ defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-
 
 - [Mackup](https://github.com/lra/mackup)
 - [iTerm theme](https://github.com/one-dark/iterm-one-dark-theme)
-- [Meslo Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/L/Regular/complete/Meslo%20LG%20L%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)

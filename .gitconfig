@@ -1,15 +1,17 @@
 [user]
 	name = Luke Askew
 
+[core]
+	editor = zed -w
+
 [include]
-  path = .gitconfig-work
+  path = .gitconfig-default
 
-[includeif "gitdir:~/Development/oss/"]
-  path = .gitconfig-oss
+[includeif "gitdir:~/Development/github/"]
+  path = .gitconfig-github
 
-[pager]
-  diff = diff-so-fancy | less --tabs=4 -RFX
-  show = diff-so-fancy | less --tabs=4 -RFX
+[init]
+	defaultBranch = main
 
 [push]
   default = current

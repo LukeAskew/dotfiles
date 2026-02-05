@@ -1,50 +1,76 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
-echo "Setting up Homebrew Cask..."
+# Check for Homebrew
+if ! command -v brew &>/dev/null; then
+  echo "Error: Homebrew is not installed. Run brew.sh first."
+  exit 1
+fi
 
-# Tap
-brew tap homebrew/cask-fonts
-brew tap homebrew/cask-versions
-brew tap homebrew/cask-drivers
+# Keep sudo alive for the duration of the script
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Install casks
 echo "Installing casks..."
 
 casks=(
+  # Essentials
   1password
-  alfred
   appcleaner
-  boom-3d
-  chromedriver
-  figma
+  raycast
+
+  # Browsers
   firefox
-  font-hack
-  forklift
   google-chrome
-  google-cloud-sdk
-  google-drive
-  imageoptim
-  iterm2
-  logitech-camera-settings
-  logitech-options
   microsoft-edge
-  moom
-  postman
-  qlcolorcode
-  qlimagesize
-  qlstephen
-  quicklook-json
-  slack
+  orion
+
+  # Development
+  docker-desktop
+  iterm2
+  ngrok
   tableplus
-  tidal
   tower
   visual-studio-code
-  webpquicklook
+  zed
+
+  # AI
+  claude
+
+  # Design
+  figma
+
+  # Communication
+  slack
+
+  # Productivity
+  forklift
+  google-drive
+  logi-options+
+  obsidian
+
+  # Media
+  audacity
+  handbrake
+  imageoptim
+  soundsource
+  tidal
+
+  # Screen recording
+  screen-studio
+  keycastr
+
+  # Debugging
+  charles
+  httpie
+
+  # Fonts
+  font-hack
+  font-meslo-lg-nerd-font
 )
 
-for c in ${casks[@]}; do
-  brew install --cask --force --appdir="/Applications" $c
+for c in "${casks[@]}"; do
+  brew install --cask --appdir="/Applications" "$c" || true
 done
 
 # Finalize

@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
-
-set -e
+set -euo pipefail
+trap 'echo "Error on line $LINENO"' ERR
 
 # Create directories
 sudo mkdir -p "/usr/local/lib"
 sudo mkdir -p "/usr/local/bin"
 
-# Create files
-if [ ! -e .gitconfig-oss ]; then
-   echo "[user]\n  email = <you@example.com>" >> .gitconfig-oss
+# Create files in dotfiles directory (will be symlinked later)
+if [ ! -e "$HOME/.gitconfig-default" ]; then
+  printf "[user]\n  email = <you@example.com>\n" > .gitconfig-default
 fi
 
-if [ ! -e .gitconfig-work ]; then
-   echo "[user]\n  email = <you@example.com>" >> .gitconfig-work
+if [ ! -e "$HOME/.gitconfig-github" ]; then
+  printf "[user]\n  email = <you@example.com>\n" > .gitconfig-github
 fi
 
-if [ ! -e .work_profile ]; then
-   echo "" >> .work_profile
+if [ ! -e "$HOME/.work_profile" ]; then
+  touch .work_profile
 fi
 
 # Run scripts
-sh scripts/symlink.sh
-sh scripts/xcode.sh
-sh scripts/brew.sh
-sh scripts/brew-cask.sh
-sh scripts/asdf.sh
-sh scripts/zsh.sh
-sh scripts/macos.sh
+bash scripts/symlink.sh
+bash scripts/xcode.sh
+bash scripts/brew.sh
+bash scripts/brew-cask.sh
+bash scripts/file-associations.sh
+bash scripts/mise.sh
+bash scripts/zsh.sh
+bash scripts/macos.sh
 
-# Install Iterm integration
+# Install iTerm integration
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
 # Finish
-source ~/.zshrc
-echo "Done!"
+echo "Done! Please restart your terminal."

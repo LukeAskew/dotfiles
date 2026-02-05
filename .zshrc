@@ -1,25 +1,30 @@
-# Enable Powerlevel10k instant prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Functions
+source ~/.functions
 
-# Libs & Plugins
-source ~/.antigen.zsh
+# Set PATH
+export PATH=/opt/homebrew/bin:$HOME/.local/bin:$PATH
 
-antigen theme romkatv/powerlevel10k
-antigen bundle common-aliases
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-antigen apply
+# User configs
+export EDITOR="zed"
+export HOMEBREW_NO_ENV_HINTS=1
 
-# Activate profiles
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Postgres
+export PGUSER=postgres
+export PGHOST=localhost
+
+# Work profile (optional)
 test -e "${HOME}/.work_profile" && source ~/.work_profile
-source ~/.bash_profile
 
-# Activate asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# Plugins (Homebrew-installed)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Activate mise (version manager)
+eval "$(mise activate zsh)"
+
+# Starship prompt (must be after mise for proper integration)
+eval "$(starship init zsh)"
 
 # Activate iTerm scripting
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -42,5 +47,6 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 setopt inc_append_history
 setopt share_history
 
-# Misc
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# Completion (case-insensitive)
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 sources=(
   .bash_profile
@@ -9,8 +12,8 @@ sources=(
   .functions
   .gemrc
   .gitconfig
-  .gitconfig-oss
-  .gitconfig-work
+  .gitconfig-default
+  .gitconfig-github
   .hushlogin
   .mackup
   .mackup.cfg
@@ -19,6 +22,14 @@ sources=(
   .zshrc
 )
 
-for i in ${sources[@]}; do
-  ln -sf $(pwd)/$i $HOME
+for i in "${sources[@]}"; do
+  ln -snf "$DOTFILES_DIR/$i" "$HOME/$i"
 done
+
+mkdir -p "$HOME/.config"
+for item in "$DOTFILES_DIR"/.config/*; do
+  ln -snf "$item" "$HOME/.config/$(basename "$item")"
+done
+
+# Setup crontab
+crontab "$HOME/.cron/crontab"

@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
+# Keep sudo alive for the duration of the script
 sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install/update Homebrew
-if test ! $(which brew); then
+if ! command -v brew &>/dev/null; then
   echo "Installing Homebrew..."
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
@@ -20,41 +23,71 @@ brew install findutils
 
 # Install Bash
 brew install bash
-brew install bash-completion2
+brew install bash-completion@2
 
-# Install more recent versions of some OS X tools
+# Install more recent versions of some macOS tools
 brew install nano
 brew install grep
 brew install screen
 
-# Web runtimes
-brew install nginx
-brew install postgresql
-brew install redis
+# Modern CLI tools
+brew install ripgrep
+brew install fd
+brew install bat
+brew install jq
+brew install fzf
+brew install htop
+brew install tree
 
-# Install font tools.
+# Git
+brew install git
+brew install git-lfs
+brew install gh
+brew install gitleaks
+
+# Web/server tools
+brew install nginx
+brew install postgresql@17
+brew install redis
+brew install docker
+brew install oha
+
+# Install font tools
 brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install other useful binaries
-brew install ack
-brew install asdf
-brew install awscli
+# Media tools
 brew install ffmpeg
-brew install gpg
-brew install git
-brew install git-lfs
-brew install graphicsmagick
-brew install grep
 brew install imagemagick
+brew install ghostscript
+brew install media-info
+brew install yt-dlp
+
+# File association utility
+brew install duti
+brew install yq
+
+# Other useful binaries
+brew install awscli
+brew install gpg
 brew install mackup
 brew install openssl
-brew install thefuck
-brew install tree
 brew install wget
 brew install zsh
+
+# Shell prompt and plugins
+brew install starship
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+brew install zsh-history-substring-search
+
+# Version manager (replaces asdf, nvm, pyenv, etc.)
+brew install mise
+
+# GitHub Actions local runner
+brew install act
 
 # Remove outdated versions from the cellar
 brew cleanup

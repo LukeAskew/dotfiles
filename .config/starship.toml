@@ -1,0 +1,90 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_status\
+$git_metrics\
+$git_state\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$python\
+$docker_context\
+$cmd_duration\
+$status\
+$line_break\
+$character\
+"""
+
+add_newline = false
+
+[character]
+success_symbol = "[⮑ ](bold green)"
+error_symbol = "[x ](bold red)"
+
+[directory]
+format = '[$read_only]($read_only_style)[$path]($style)'
+read_only = "󰌾 "
+truncate_to_repo = false
+truncation_length = 0
+truncation_symbol = "../"
+use_logical_path = true
+
+[git_branch]
+symbol = " "
+format = ' [❯](bold white) [$symbol$branch]($style)'
+
+[git_status]
+disabled = true
+
+[cmd_duration]
+format = ' [❯](bold white) [⏱ $duration]($style)'
+
+[nodejs]
+symbol = " "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[python]
+symbol = "󰌠 "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[rust]
+symbol = "󱘗 "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[golang]
+symbol = " "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[java]
+symbol = " "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[kotlin]
+symbol = " "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[ruby]
+symbol = "\ueb48 "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[php]
+symbol = " "
+format = ' [❯](bold white) [$symbol($version)]($style)'
+
+[docker_context]
+symbol = " "
+format = ' [❯](bold white) [$symbol$context]($style)'
+
+[aws]
+disabled = true
+
+[sudo]
+style = 'bold red'
+symbol = '! '
+disabled = false
