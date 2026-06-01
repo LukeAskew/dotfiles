@@ -20,7 +20,10 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Activate mise (version manager)
+# Zoxide (directory jumper)
+eval "$(zoxide init zsh)"
+
+# Mise (version manager)
 eval "$(mise activate zsh)"
 
 # Starship prompt (must be after mise for proper integration)
@@ -35,7 +38,7 @@ auto_ls () {
   ls -AG
 }
 
-if [[ ${chpwd_functions[(I)auto-ls]} -eq 0 ]]; then
+if [[ ${chpwd_functions[(I)auto_ls]} -eq 0 ]]; then
   chpwd_functions+=(auto_ls)
 fi
 

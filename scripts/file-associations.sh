@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-set -euo pipefail
-
 # Set default applications for file types using duti
 # Dynamically fetches extensions from GitHub Linguist
-
-set -e
+set -euo pipefail
 
 for cmd in duti yq curl; do
   if ! command -v "$cmd" &>/dev/null; then

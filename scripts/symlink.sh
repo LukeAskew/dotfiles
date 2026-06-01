@@ -15,7 +15,6 @@ sources=(
   .gitconfig-default
   .gitconfig-github
   .hushlogin
-  .mackup
   .mackup.cfg
   .rdebugrc
   .zprofile

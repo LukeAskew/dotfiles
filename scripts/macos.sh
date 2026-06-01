@@ -14,7 +14,7 @@ osascript -e 'tell application "System Settings" to quit' 2>/dev/null || true
 defaults write -g NSTableViewDefaultSizeMode -int 2
 
 # Hide battery percentage in menubar
-defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool true
+defaults -currentHost write com.apple.controlcenter BatteryShowPercentage -bool false
 
 # Always show scrollbars
 defaults write -g AppleShowScrollBars -string "Always"
@@ -38,7 +38,7 @@ defaults write -g NSTextShowsControlCharacters -bool true
 defaults write -g NSWindowResizeTime -float 0.001
 
 # Disable Resume system-wide
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Don't automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
@@ -99,9 +99,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Finder                                                                      #
 ###############################################################################
 
-# Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
-
 # Set preferred view style
 defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 
@@ -109,7 +106,7 @@ defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Show hidden files by default
-defaults write com.apple.Finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Show path bar
 defaults write com.apple.finder ShowPathbar -bool true

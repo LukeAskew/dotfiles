@@ -51,10 +51,11 @@ casks=(
 
   # Media
   audacity
-  handbrake
+  handbrake-app
   imageoptim
   soundsource
   tidal
+  vlc
 
   # Screen recording
   screen-studio
@@ -62,7 +63,7 @@ casks=(
 
   # Debugging
   charles
-  httpie
+  httpie-desktop
 
   # Fonts
   font-hack

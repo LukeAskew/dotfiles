@@ -31,13 +31,14 @@ brew install grep
 brew install screen
 
 # Modern CLI tools
-brew install ripgrep
-brew install fd
 brew install bat
-brew install jq
+brew install fd
 brew install fzf
 brew install htop
+brew install jq
+brew install ripgrep
 brew install tree
+brew install zoxide
 
 # Git
 brew install git
@@ -46,11 +47,11 @@ brew install gh
 brew install gitleaks
 
 # Web/server tools
+brew install docker
 brew install nginx
+brew install oha
 brew install postgresql@17
 brew install redis
-brew install docker
-brew install oha
 
 # Install font tools
 brew tap bramstein/webfonttools
@@ -60,8 +61,8 @@ brew install woff2
 
 # Media tools
 brew install ffmpeg
-brew install imagemagick
 brew install ghostscript
+brew install imagemagick
 brew install media-info
 brew install yt-dlp
 
@@ -71,7 +72,7 @@ brew install yq
 
 # Other useful binaries
 brew install awscli
-brew install gpg
+brew install gnupg
 brew install mackup
 brew install openssl
 brew install wget

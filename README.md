@@ -13,7 +13,7 @@
 Run the bootstrap script:
 
 ```bash
-source scripts/bootstrap.sh
+bash scripts/bootstrap.sh
 ```
 
 Add a spacer to the dock:
