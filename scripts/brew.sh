@@ -46,7 +46,7 @@ brew install git-lfs
 brew install gh
 brew install gitleaks
 
-# Web/server tools
+# Web tools
 brew install docker
 brew install nginx
 brew install oha
@@ -66,16 +66,15 @@ brew install imagemagick
 brew install media-info
 brew install yt-dlp
 
-# File association utility
-brew install duti
-brew install yq
-
-# Other useful binaries
+# Other useful tools
+brew install 1password-cli
 brew install awscli
+brew install duti
 brew install gnupg
 brew install mackup
 brew install openssl
 brew install wget
+brew install yq
 brew install zsh
 
 # Shell prompt and plugins

@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-
 sources=(
   .bash_profile
-  .tool-versions
-  .work_profile
   .bashrc
-  .cron
   .functions
   .gemrc
   .gitconfig
@@ -17,18 +12,19 @@ sources=(
   .hushlogin
   .mackup.cfg
   .rdebugrc
+  .tool-versions
+  .work_profile
   .zprofile
   .zshrc
 )
 
+# Symlink dotfiles and directories
 for i in "${sources[@]}"; do
-  ln -snf "$DOTFILES_DIR/$i" "$HOME/$i"
+  ln -snf "$PWD/$i" "$HOME/$i"
 done
 
+# Symlink config directories
 mkdir -p "$HOME/.config"
-for item in "$DOTFILES_DIR"/.config/*; do
+for item in "$PWD"/.config/*; do
   ln -snf "$item" "$HOME/.config/$(basename "$item")"
 done
-
-# Setup crontab
-crontab "$HOME/.cron/crontab"

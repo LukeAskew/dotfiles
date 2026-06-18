@@ -28,6 +28,7 @@ bash scripts/file-associations.sh
 bash scripts/mise.sh
 bash scripts/zsh.sh
 bash scripts/macos.sh
+bash scripts/jobs.sh
 
 # Install iTerm integration
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
